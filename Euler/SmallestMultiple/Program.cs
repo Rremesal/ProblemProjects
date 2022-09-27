@@ -10,18 +10,23 @@ namespace SmallestMultiple
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i <= 2520; i++)
+            
+            for (int i = 1; i <= 100000000; i++)
             {
+                int counter = 0;
                 for (int j = 1; j <= 20; j++)
                 {
-                    
-                    if( i % j == 0)
+                    if(i % j == 0)
                     {
-                        Console.WriteLine($"{i} / {j} = {i % j}");
+                        counter++;
+                        if(counter == 20)
+                        {
+                            Console.WriteLine($"The answer: {i} ");
+                        }
                     }
                 }
             }
-                
+
             
         }
     }

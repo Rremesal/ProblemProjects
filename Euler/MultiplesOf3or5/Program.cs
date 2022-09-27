@@ -20,7 +20,7 @@ namespace MultiplesOf3or5
                     sumTotal += i;
                 }
             }
-            Console.WriteLine(sumTotal);
+            Console.WriteLine($"Sum of all multiples: {sumTotal} ");
         }
     }
 }

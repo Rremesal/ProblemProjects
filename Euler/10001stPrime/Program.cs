@@ -10,27 +10,20 @@ namespace _10001stPrime
     {
         static void Main(string[] args)
         {
-            int value = 2; //1 is no prime number
-            
-            for(int i = 1; i <= 6;i++)
+            for(int i = 0; i <= 10001;i++)
             {
                 int counter = 0;
-                for (int j = 1; j <= i; j++)
+                for(int j = 1; j <= i;j++)
                 {
-                    Console.WriteLine($"{i} : {value} --> divided by {j}");
-                    
-                    if (value % j == 0)
+                    if(i % j == 0)
                     {
                         counter++;
                     }
-                    if(counter == 2)
-                    {
-                        Console.WriteLine($"{i} : {value} is a prime number");
-                    }
-                    counter = 0;
+
+                    
                 }
-                
-                value++;
+                Console.WriteLine($"{i}");
+                if (counter == 2) Console.WriteLine(i);
             }
 
             

@@ -10,24 +10,33 @@ namespace _10001stPrime
     {
         static void Main(string[] args)
         {
-            for(int i = 0; i <= 10001;i++)
+            int amountOfPrimes = 0;
+            int count = 0;
+            while(amountOfPrimes < 10001)
             {
+                
                 int counter = 0;
-                for(int j = 1; j <= i;j++)
+                for(int j = 1; j <= count;j++)
                 {
-                    if(i % j == 0)
+                    if(count % j == 0)
                     {
                         counter++;
                     }
-
+                }
+                if (counter == 2)
+                {
+                    amountOfPrimes++;
                     
                 }
-                Console.WriteLine($"{i}");
-                if (counter == 2) Console.WriteLine(i);
+                count++;
+                if (amountOfPrimes >= 9000) Console.WriteLine($" {count} : {amountOfPrimes}");
+                else if (amountOfPrimes % 1000 == 0) Console.WriteLine($" {count} : {amountOfPrimes}");
             }
+            Console.WriteLine(count);
 
-            
-            
+
+
+
         }
 
     }
